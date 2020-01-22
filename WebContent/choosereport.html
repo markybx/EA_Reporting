@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Choose report</title>
+</head>
+<body>
+	<section class="row ng-scope">
+	<h3>1. Choose report</h3>
+
+	<h4>Select Report Template</h4>
+	<div class="row" style="width: 600px">
+		<div class="col-md-12">
+			<select id="ReportSelector" class="form-control" style="width: 350px;"
+				ng-model="formData.templateSpec"
+				ng-options="report.title for report in formData.reports"
+				ng-change="getColumnSpec()">
+			</select>
+		</div>
+		<div class="col-md-12">
+					
+			<ul class="pager">
+				<li class="next"><a ui-sref="form.columns" href="" title="Next">Next</a></li>
+			</ul>
+		</div>
+	</div>
+	</section>
+</body>
+</html>

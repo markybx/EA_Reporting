@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Choose Columns</title>
+</head>
+<body>
+	<h3>2. Choose Columns</h3>
+	<div class="row">
+		<h4>Choose Columns for Report {{ formData.templateSpec.title }}</h4>
+		<table>
+			<tr>
+				<th>Standard Report Columns</th>
+				<th width="30">&nbsp;</th>
+				<th>Selected Columns</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<td>
+					<select size="15" style="width: 350px;" id="availableCols" multiple ng-multiple="true" ng-model="formData.columnSelection.selectOptions" 
+						ng-options="column.description for column in formData.reportOptions.selectOptions">
+					</select>
+				</td>
+				<td valign="middle">
+					<table>
+						<tr><td><button type="button" class="btn btn-default btn-sm" ng-click="addColumns(formData.reportOptions.selectOptions)">
+							<i class="glyphicon glyphicon-chevron-right"></i>
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</button></td></tr>
+						<tr><td><button type="button" class="btn btn-default btn-sm" ng-click="addColumns(formData.columnSelection.selectOptions)">
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</button></td></tr>
+						<tr><td><button type="button" class="btn btn-default btn-sm" ng-click="removeColumns(formData.columnOrdering.selectOptions)">
+							<i class="glyphicon glyphicon-chevron-left"></i>
+						</button></td></tr>
+						<tr><td><button type="button" class="btn btn-default btn-sm" ng-click="removeColumns(formData.reportSpec.selectOptions)">
+							<i class="glyphicon glyphicon-chevron-left"></i>
+							<i class="glyphicon glyphicon-chevron-left"></i>
+						</button></td></tr>
+					</table>
+				</td>
+				<td>
+					<select size="15" style="width: 350px;" id="selectedCols" multiple ng-multiple="true" ng-model="formData.columnOrdering.selectOptions"
+						ng-options="column.description for column in formData.reportSpec.selectOptions">
+					</select>
+				</td>
+				<td valign="middle">
+					<table>
+						<tr><td><button ng-click="moveUp()"><i class="glyphicon glyphicon-chevron-up"></i> Up</button></td></tr>
+						<tr><td><button ng-click="moveDown()"><i class="glyphicon glyphicon-chevron-down"></i> Down</button></td></tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<div class="col-md-12">
+					
+			<ul class="pager" style="width: 700px">
+				<li class="previous"><a ui-sref="form.reports" href="" title="Previous">Previous</a></li>
+				<li class="next"><a ui-sref="form.searchcriteria" href="" title="Next">Next</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EA RACE Reporting</title>
+</head>
+<body>
+	<div
+		style="height: 69px; width: 250px; background-image: url('images/EAlogo.png'); background-repeat: no-repeat">
+	</div>
+	<div  style="width: 1000px; height: 800px; background-image: url('images/smallbanner-lighter.gif'); background-repeat:no-repeat; background-size: initial; background-position: right bottom;">
+		<div>
+
+
+			<div>
+				<h2>Create RACE Report</h2>
+
+				<!-- the links to our nested states using relative paths -->
+				<!-- add the active class if the state matches our ui-sref -->
+				<div id="status-buttons" class="text-center">
+					<a ui-sref-active="active" ui-sref=".reports"><span>1.</span>
+						Reports</a> <a ui-sref-active="active" ui-sref=".columns"><span>2.</span>
+						Columns</a> <a ui-sref-active="active" ui-sref=".searchcriteria"><span>3.</span>
+						Search Criteria</a>
+				</div>
+			</div>
+
+			<!-- use ng-submit to catch the form submission and use our Angular function -->
+			<!--<form id="reports-form" ng-submit="">-->
+
+			<!-- our nested state views will be injected here -->
+			<div id="form-views" ui-view></div>
+			<!--</form>-->
+
+		</div>
+		<!--<div ng-bind-html="errmessage">
+		</div>-->
+	</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Criteria</title>
+</head>
+<body>
+	<h3>3. Search Criteria</h3>
+	<div>
+		<table>
+			<tr>
+				<td style="padding: 10px"><h4>Choose Search Criteria for Report {{ formData.templateSpec.title }}</h4></td>
+			</tr>
+			<tr>
+				<td style="padding: 10px"><button ng-click="addConditionGroup()">Add Search Group</button></td>
+			</tr>
+		</table>
+	</div>
+	<div style="padding: 20px; width: 1000px; max-height: 600px;  min-height: 400px; overflow-y: scroll;">
+	<div style="padding-top: 10px" ng-repeat="group in formData.reportSpec.conditionGroups">
+			<select style="width: 100px" class="form-control" 
+				ng-show="formData.reportSpec.conditionGroups.indexOf(group) > 0" 
+				ng-multiple="false"
+				ng-model="group.conditions[0].logicOp" 
+				ng-options="op for op in ['AND', 'AND NOT', 'OR', 'OR NOT']">
+			</select>
+		<div style="border-style: solid; border-width: 1px; border-color: grey; padding: 20px">
+			<div style="padding-top: 10px">
+			<table class="table table-bordered" style="width: 100%;"><tr>
+			<td style="width: 95%;">
+			<table style="width: 100%;">
+				<tr>
+					<th style="width: 12%;">Logic</th>
+					<th style="width: 35%;">Column</th>
+					<th style="width: 12%x;">Comparison</th>
+					<th style="width: 35%;">Value</th>
+					<th style="width: 5%;"></th>
+				</tr>
+				<tr ng-repeat="condition in group.conditions">
+					<td valign="top">
+						<select id="" class="form-control" ng-multiple="false" ng-model="condition.logicOp" 
+							ng-options="op for op in ['AND', 'AND NOT', 'OR', 'OR NOT']"
+							ng-show="(group.conditions.indexOf(condition) > 0)">
+						</select>
+
+					</td>
+					<td valign="top">
+						<select id="" class="form-control" ng-multiple="false" ng-model="condition.column"
+							ng-options="column.description for column in formData.reportOptions.selectOptions" ng-change="onSelectColumn(condition)">
+						</select>
+					</td>
+					<td valign="top">
+						<select id="" class="form-control" ng-multiple="false" ng-model="condition.compareOp"
+							ng-options="op for op in condition.compareOpts">
+						</select>
+					</td>
+					<td valign="top">
+						<input type="text" name="conditionValue" class="form-control" 
+						ng-model="condition.rightValue" ng-show="condition.column.dataType != 'TIME' && condition.column.dataType != 'BOOLEAN' && ! condition.column.valueAssisted">
+						<select style="width: 100%;" size="5" multiple ng-multiple="true" ng-model="condition.rightValue" 
+							 ng-show="condition.column.valueAssisted" ng-options="value for value in valueAssistCache[condition.column.typeAlias][condition.column.attribute]">
+						</select>
+			            <p class="input-group" ng-show="condition.column.dataType == 'TIME'">
+			              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="condition.rightValue" is-open="condition.openDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+			              <span class="input-group-btn">
+			                <button type="button" class="btn btn-default" ng-click="open($event, condition)"><i class="glyphicon glyphicon-calendar"></i></button>
+			              </span>
+			            </p>
+						
+					</td>
+					<td><button ng-click="removeCondition(group, condition)">
+						<i class="glyphicon glyphicon-remove"></i>				
+					</button></td>
+				</tr>
+			</table>
+			</td>
+			<td style="width: 5%; padding-top: 10px" valign="bottom">
+				&nbsp;<button ng-click="addCondition(group)">Add</button>
+			</td>
+			</tr></table>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div class="row" style="width: 700px">
+		<div class="col-md-12" style="width: 700px">
+					
+			<ul class="pager" style="width: 700px">
+				<li class="previous"><a ui-sref="form.columns" href="" title="Previous">Previous</a></li>
+				<li class="next"><a class="btn btn-default" ng-class="{'disabled': busy}" ng-click="createReport()" title="Create Report">Create Report</a></li>
+				<!--<button ng-click="createReport()">Create Report</button>-->
+			</ul>
+		</div>
+		<div class="row" style="width: 700px">
+			<p>
+				<label>Report Name: </label>
+				<a href="{{ formData.createData.location }}">{{ formData.createData.name }}</a>
+			</p>
+		</div>
+	</div>
+	<!--<div>
+	<p> Condition Groups: {{ formData.reportSpec.conditionGroups }}</p>
+	</div>-->
+</body>
+</html>

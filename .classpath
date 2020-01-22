@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_51">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/dfc/7.1.0000.0118/dfc-7.1.0000.0118.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/org.aspectj.tools/1.5.2a/org.aspectj.tools-1.5.2a.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/log4j/1.2.13/log4j-1.2.13.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/com.rsa.common/6.1/com.rsa.common-6.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/com.rsa.jFIPS/5.0/com.rsa.jFIPS-5.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/com.rsa.jce/6.1/com.rsa.jce-6.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/com.rsa.jcmFIPS/6.1/com.rsa.jcmFIPS-6.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/javax.activation/1.1/javax.activation-1.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/org.apache.commons.lang/2.4/org.apache.commons.lang-2.4.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/emc/documentum/dfc/org.apache.commons.codec/1.3/org.apache.commons.codec-1.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/18.0/guava-18.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/net/sourceforge/jexcelapi/jxl/2.6.10/jxl-2.6.10.jar"/>
+	<classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/4.0.9.RELEASE/spring-core-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/4.0.9.RELEASE/spring-context-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/4.0.9.RELEASE/spring-aop-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-beans/4.0.9.RELEASE/spring-beans-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-expression/4.0.9.RELEASE/spring-expression-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-web/4.0.9.RELEASE/spring-web-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-webmvc/4.0.9.RELEASE/spring-webmvc-4.0.9.RELEASE.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/jcl-over-slf4j/1.7.11/jcl-over-slf4j-1.7.11.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.11/slf4j-api-1.7.11.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/jul-to-slf4j/1.7.11/jul-to-slf4j-1.7.11.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/log4j-over-slf4j/1.7.11/log4j-over-slf4j-1.7.11.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.3.5/jackson-core-2.3.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.3.5/jackson-databind-2.3.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/tomcat/tomcat-servlet-api/7.0.62/tomcat-servlet-api-7.0.62.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
